@@ -5,7 +5,7 @@ La app permite consultar una lista de publicaciones y ver su detalle, utilizando
 
 ---
 # Sitio publicado
-[desafio-tecnico-foca.netlify.app](https://desafio-tecnico-foca.netlify.app/posts)
+[https://desafio-tecnico-foca.netlify.app/posts](https://desafio-tecnico-foca.netlify.app/posts)
 
 ## 🛠️ Tecnologías utilizadas
 
