@@ -1,27 +1,94 @@
-# DesafioAngularJr
+# 📘 Desafío Técnico Angular Jr – FOCA Software
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+Este proyecto es una aplicación web desarrollada con **Angular 14**, como parte del desafío técnico para el puesto de **Desarrollador Angular Jr** en FOCA Software.  
+La app permite consultar una lista de publicaciones y ver su detalle, utilizando datos reales simulados desde `jsonplaceholder.typicode.com`.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠️ Tecnologías utilizadas
 
-## Code scaffolding
+- Angular 14
+- Angular Material
+- RxJS
+- TypeScript
+- HTML / SCSS
+- Jasmine & Karma (para tests unitarios)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🎯 Funcionalidades implementadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+✔️ Listado de posts desde API  
+✔️ Búsqueda en tiempo real por título (Pipe personalizado)  
+✔️ Vista de detalle con contenido y comentarios  
+✔️ Manejo de errores y carga (spinner)  
+✔️ Estilo moderno con Angular Material  
+✔️ Botón de volver en barra superior  
+✔️ Pruebas unitarias completas en servicios y componentes
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🧪 Tests ejecutados
 
-## Running end-to-end tests
+```bash
+ng test
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Todos los tests fueron desarrollados con Jasmine y Karma, incluyendo:
 
-## Further help
+✅ PostService (3 métodos probados: getPosts, getPostById, getCommentsByPostId)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+✅ PostListComponent (render de título y posts)
+
+✅ PostDetailComponent (render dinámico con ActivatedRoute)
+
+✅ SpinnerComponent y Pipe personalizada
+
+## ⚠️ Nota sobre configuración de Karma
+
+Este proyecto tiene una modificación en ```karma.conf.js``` para ejecutar los tests en Brave en lugar de Chrome:
+
+```ts
+process.env.CHROME_BIN = 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe';
+```
+
+- 🧠 Si ya tenés Brave instalado, podés dejarlo tal como está.
+- ❌ Si no usás Brave, simplemente eliminá esa línea para que Karma abra el navegador por defecto (Chrome o Firefox).
+
+## ▶️ Cómo correr la app localmente
+
+1. Clonar el repositorio
+```bash
+git clone https://github.com/Monteluca/desafio-angular-jr.git
+```
+
+2. Instalar dependencias
+```bash
+npm install
+```
+3. Correr el servidor
+```bash
+ng serve
+```
+4. Abrir en el navegador
+```bash
+http://localhost:4200
+```
+
+
+## 📸 Capturas
+
+### 🔹 Vista principal
+![Lista de posts](./screenshots/lista.png)
+
+### 🔹 Vista de detalles
+![Detalles del post](./screenshots/detalles.png)
+
+## 📩 Autor
+
+**Desarrollado por Luca Monteleone**
+
+- 💼 Full Stack Developer – Angular & Spring  
+- 📫 [lucamonteleone546@gmail.com](mailto:lucamonteleone546@gmail.com)  
+- 🌐 [GitHub: Monteluca](https://github.com/Monteluca)
+

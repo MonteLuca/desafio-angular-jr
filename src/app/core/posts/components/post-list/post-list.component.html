@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="custom-toolbar">
+  <mat-icon>article</mat-icon>
+  <span class="toolbar-title">Lista de Posts</span>
+</mat-toolbar>
+
+<app-spinner *ngIf="loading"></app-spinner>
+
+<div *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</div>
+
+<mat-form-field appearance="outline" class="search-field" *ngIf="!loading && !errorMessage">
+  <mat-label>Buscar por título</mat-label>
+  <input matInput type="text" [(ngModel)]="searchTerm" />
+</mat-form-field>
+
+<div *ngIf="!loading && !errorMessage">
+  <mat-card *ngFor="let post of posts | postFilter: searchTerm" class="post-card">
+    <mat-card-title>{{ post.title }}</mat-card-title>
+    <mat-card-actions>
+      <button class="boton" mat-flat-button color="primary" [routerLink]="['/posts', post.id]">Ver detalle</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

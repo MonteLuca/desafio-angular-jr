@@ -1,0 +1,35 @@
+<mat-toolbar color="primary" class="custom-toolbar">
+  <button mat-flat-button color="accent" routerLink="/posts" class="volver-btn">
+    ← Volver
+  </button>
+
+  <span class="toolbar-title">
+    <mat-icon style="vertical-align: middle; margin-right: 6px;">info</mat-icon>
+    DETALLES
+  </span>
+
+  <span class="toolbar-spacer"></span>
+</mat-toolbar>
+
+
+<app-spinner *ngIf="loading"></app-spinner>
+
+<mat-card *ngIf="!loading && post && !postError" class="post-detail-card">
+  <mat-card-title>{{ post.title }}</mat-card-title>
+  <mat-card-content>
+    <p>{{ post.body }}</p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="comments.length > 0" class="comments-card">
+  <mat-card-subtitle>Comentarios</mat-card-subtitle>
+  <mat-list>
+    <mat-list-item *ngFor="let comment of comments">
+      <div matLine><strong>{{ comment.name }}</strong> ({{ comment.email }})</div>
+      <div matLine>{{ comment.body }}</div>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+
+<div *ngIf="postError" class="error">{{ postError }}</div>
+<div *ngIf="commentsError" class="error">{{ commentsError }}</div>
