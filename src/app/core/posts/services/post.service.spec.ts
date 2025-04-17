@@ -21,7 +21,7 @@ describe('PostService', () => {
   });
 
   afterEach(() => {
-    httpMock.verify(); // asegura que no quede ningún request sin resolver
+    httpMock.verify();
   });
 
   it('should be created', () => {

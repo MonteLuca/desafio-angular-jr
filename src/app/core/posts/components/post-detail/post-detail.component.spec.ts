@@ -30,9 +30,8 @@ describe('PostDetailComponent', () => {
 
     mockPostService = TestBed.inject(PostService) as jasmine.SpyObj<PostService>;
 
-    // Simulación de los métodos
     mockPostService.getPostById.and.returnValue(of(dummyPost));
-    mockPostService.getCommentsByPostId.and.returnValue(of([])); // vacío por ahora
+    mockPostService.getCommentsByPostId.and.returnValue(of([]));
 
     fixture = TestBed.createComponent(PostDetailComponent);
     component = fixture.componentInstance;
