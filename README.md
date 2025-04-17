@@ -4,6 +4,8 @@ Este proyecto es una aplicación web desarrollada con **Angular 14**, como parte
 La app permite consultar una lista de publicaciones y ver su detalle, utilizando datos reales simulados desde `jsonplaceholder.typicode.com`.
 
 ---
+# Sitio publicado
+https://desafio-tecnico-foca.netlify.app
 
 ## 🛠️ Tecnologías utilizadas
 
